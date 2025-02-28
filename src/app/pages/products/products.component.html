@@ -1,1 +1,13 @@
-<p>products works!</p>
+<div class="container">
+    <div class="row">
+    </div>
+</div>
+
+
+@for (item of productList(); track $index) {
+    <div class="col-3">
+        <div class="card product-card">
+            <img [src]="item.thumbnailUrl" alt="Product Image" class="card-img-top product-image">
+        </div>
+    </div>
+}

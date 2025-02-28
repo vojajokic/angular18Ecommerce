@@ -1,6 +1,6 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, OnInit, signal } from '@angular/core';
 import { MasterService } from '../../service/master.service';
-import { APIResponseModel } from '../../model/Product';
+import { APIResponseModel, ProductList } from '../../model/Product';
 
 @Component({
   selector: 'app-products',
@@ -11,6 +11,9 @@ import { APIResponseModel } from '../../model/Product';
 })
 export class ProductsComponent implements OnInit {
 
+  // productList: ProductList [] = [];
+  productList = signal<ProductList []>([]);
+
   masterService = inject(MasterService);
 
   ngOnInit(): void {
@@ -19,6 +22,8 @@ export class ProductsComponent implements OnInit {
 
   loadAllProducts() {
     this.masterService.getAllProducts().subscribe((res: APIResponseModel) => {
+      //this.productList = res.data;
+      this.productList.set(res.data);
       
     })
   }
