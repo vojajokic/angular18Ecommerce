@@ -17,7 +17,7 @@ export class ProductsComponent implements OnInit {
   masterService = inject(MasterService);
 
   ngOnInit(): void {
-    
+    this.loadAllProducts();
   }
 
   loadAllProducts() {

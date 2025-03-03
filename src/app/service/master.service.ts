@@ -8,7 +8,7 @@ import { APIResponseModel } from '../model/Product';
 })
 export class MasterService {
 
- // apiUrl: string = 'https://freeapi.miniprojectideas.com/api/BigBasket/';
+//  apiUrl: string = 'https://freeapi.miniprojectideas.com/api/BigBasket/';
   apiUrl: string = 'https://projectapi.gerasim.in/api/OnlineLearning/';
   
 

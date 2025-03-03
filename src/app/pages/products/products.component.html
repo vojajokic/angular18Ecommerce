@@ -1,13 +1,27 @@
+
 <div class="container">
     <div class="row">
+        @for (item of productList(); track $index) {
+            <div class="col-3">
+                <div class="card product-card">
+                    <img [src]="item.thumbnailUrl" alt="Product Image" class="card-img-top product-image">
+                    <span class="category-badge">{{item.courseName}}</span>
+                    <div class="card-body">
+                        <h5 class="card-title">{{item.courseName}}</h5>
+                        <p class="product-price">${{item.totalHours}}</p>
+                    </div>
+                </div>
+            </div>
+        
+        }
     </div>
 </div>
 
 
-@for (item of productList(); track $index) {
+<!-- @for (item of productList(); track $index) {
     <div class="col-3">
         <div class="card product-card">
             <img [src]="item.thumbnailUrl" alt="Product Image" class="card-img-top product-image">
         </div>
     </div>
-}
+} -->
