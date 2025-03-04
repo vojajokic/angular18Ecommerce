@@ -4,14 +4,24 @@ export interface APIResponseModel {
     data: any
 }
 
-export interface ProductList {
-    courseId: number
-    courseName: string
-    createdDate: string
-    totalHours: string
-    totalVideos: number
-    courseDescription: string
-    thumbnailUrl: string
+// export interface ProductList {
+//     courseId: number
+//     courseName: string
+//     createdDate: string
+//     totalHours: string
+//     totalVideos: number
+//     courseDescription: string
+//     thumbnailUrl: string
+//   }
+
+  export interface ProductList {
+    id: number
+    title: string
+    price: number
+    description: string
+    category: string
+    image: string
+    rating:any
   }
 
 // export interface ProductList {
