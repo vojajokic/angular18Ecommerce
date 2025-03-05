@@ -10,7 +10,7 @@ export class MasterService {
 
 //  apiUrl: string = 'https://freeapi.miniprojectideas.com/api/BigBasket/';
   // apiUrl: string = 'https://projectapi.gerasim.in/api/OnlineLearning/';
-  apiUrl: string = 'https://fakestoreapi.com/products';
+  apiUrl: string = 'https://dummyjson.com/products';
 
   
   
