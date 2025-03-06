@@ -1,20 +1,30 @@
 
-<div class="container">
+<div class="container-fluid">
     <div class="row">
-        @for (item of productList; track $index) {
-            <div class="col-3 pt-2">
-                <div class="card product-card">
-                    <img [src]="item.images[0]" alt="Product Image" class="card-img-top product-image">
-                    <span class="category-badge">{{item.category}}</span>
-                    <div class="card-body">
-                        <h5 class="card-title">{{item.title}}</h5>
-                        <p class="product-price">${{item.price}}</p>
-                        <button class="btn add-to-cart-btn">Add to Cart</button>
+        <div class="col-2">
+            <h5>Category</h5>
+            @for (item of categoryList ; track $index) {
+                <button class="btn btn-success mt-2">{{item}}</button>
+            }
+        </div>
+        <div class="col-10">
+            <div class="row">
+                @for (item of productList; track $index) {
+                    <div class="col-3 pt-2">
+                        <div class="card product-card">
+                            <img [src]="item.images[0]" alt="Product Image" class="card-img-top product-image">
+                            <span class="category-badge">{{item.category}}</span>
+                            <div class="card-body">
+                                <h5 class="card-title">{{item.title}}</h5>
+                                <p class="product-price">${{item.price}}</p>
+                                <button class="btn add-to-cart-btn">Add to Cart</button>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                
+                }
             </div>
-        
-        }
+                </div>
     </div>
 </div>
 

@@ -24,4 +24,8 @@ export class MasterService {
     return this.http.get<APIResponseModel>(this.apiUrl);
     // return this.http.get<ProductList[]>(this.apiUrl);
   }
+
+  getAllCategory(): Observable<string[]> {
+    return this.http.get<string[]>(this.apiUrl+"/Category-list")
+  }
 }
