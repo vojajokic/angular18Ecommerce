@@ -1,7 +1,9 @@
+// 
 export interface APIResponseModel {
-    message: string,
-    result: boolean,
-    data: any
+  total: number,
+  skip: number,
+  limit: number,
+  products: any,
 }
 
 // export interface ProductList {

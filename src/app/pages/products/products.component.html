@@ -4,7 +4,7 @@
         @for (item of productList; track $index) {
             <div class="col-3 pt-2">
                 <div class="card product-card">
-                    <!-- <img [src]="item.images[1]" alt="Product Image" class="card-img-top product-image"> -->
+                    <img [src]="item.images[0]" alt="Product Image" class="card-img-top product-image">
                     <span class="category-badge">{{item.category}}</span>
                     <div class="card-body">
                         <h5 class="card-title">{{item.title}}</h5>

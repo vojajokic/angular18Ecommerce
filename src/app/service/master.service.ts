@@ -17,10 +17,11 @@ export class MasterService {
 
   constructor(private http: HttpClient) { }
 
-  // getAllProducts(): Observable<APIResponseModel> {
-  getAllProducts(): Observable<ProductList[]>{
+  getAllProducts(): Observable<APIResponseModel> {
+  // getAllProducts(): Observable<ProductList[]>{
 
     // return this.http.get<APIResponseModel>(this.apiUrl + "GetAllCourse");
-    return this.http.get<ProductList[]>(this.apiUrl);
+    return this.http.get<APIResponseModel>(this.apiUrl);
+    // return this.http.get<ProductList[]>(this.apiUrl);
   }
 }

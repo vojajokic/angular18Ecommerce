@@ -31,8 +31,11 @@ export class ProductsComponent implements OnInit {
     //   this.productList = data;
     // })
     // this.masterService.getAllProducts().subscribe((res: APIResponseModel) => {
-    this.masterService.getAllProducts().subscribe((res) => {
-        this.productList = res;
+    this.masterService.getAllProducts().subscribe((res: APIResponseModel) => {
+      this.productList = res.products;
+      console.log(this.productList);
+  // this.masterService.getAllProducts().subscribe((res) => {
+    //     this.productList = res;
       // this.productList.set(res);
       
     })
