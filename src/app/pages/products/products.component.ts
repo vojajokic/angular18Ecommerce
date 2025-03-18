@@ -3,11 +3,12 @@ import { MasterService } from '../../service/master.service';
 import { APIResponseModel, ProductList } from '../../model/Product';
 import { HttpClient } from '@angular/common/http';
 import { map, Observable, Subscription } from 'rxjs';
+import { AsyncPipe } from '@angular/common';
 
 @Component({
   selector: 'app-products',
   standalone: true,
-  imports: [],
+  imports: [AsyncPipe],
   templateUrl: './products.component.html',
   styleUrl: './products.component.css'
 })
@@ -34,6 +35,12 @@ export class ProductsComponent implements OnInit, OnDestroy {
         console.log(this.categoryList);
       });
         // this.loadAllCategory();
+  }
+
+  getProductsByCategory(cat: string) {
+    this.masterService.getAllProductsByCategory(cat).subscribe((res: APIResponseModel) => {
+      this.productList = res.products;
+    })
   }
 
   loadAllProducts() {

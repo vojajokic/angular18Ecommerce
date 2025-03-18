@@ -28,4 +28,11 @@ export class MasterService {
   getAllCategory(): Observable<string[]> {
     return this.http.get<string[]>(this.apiUrl+"/Category-list")
   }
+
+  getAllProductsByCategory(category: string): Observable<APIResponseModel> {
+    const url = `${this.apiUrl}/category/${category}`;
+    return this.http.get<APIResponseModel>(url);
+    // return this.http.get<APIResponseModel>(this.apiUrl+"/category/"+category)
+  }
 }
+

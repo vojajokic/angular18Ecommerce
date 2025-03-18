@@ -3,8 +3,8 @@
     <div class="row">
         <div class="col-2">
             <h5>Category</h5>
-            @for (item of categoryList ; track $index) {
-                <button class="btn btn-success mt-2">{{item}}</button>
+            @for (item of categoryList; track $index) {
+                <button class="btn btn-success mt-2" (click)="getProductsByCategory(item)">{{item}}</button>
             }
         </div>
         <div class="col-10">
