@@ -1,5 +1,5 @@
 .product-card {
-    border: 2px solid #007bff; /* Blue border highlight */
+    border: 2px solid #007bffd3; /* Blue border highlight */
     border-radius: 10px;
     overflow: hidden;
     transition: transform 0.2s, box-shadow 0.2s;
